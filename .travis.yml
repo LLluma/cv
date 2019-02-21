@@ -1,0 +1,21 @@
+sudo:       required
+language:   generic
+services:   docker
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: develop
+
+tex-config:
+- tex-scheme=small
+- push-type=none
+- build-pattern=*.tex
+- packages=babel, inputenc, opensans, fontenc, microtype, amsmath, amsfonts, amsthm, pdftex, wrapfig, geometry, xcolor, sidecap, geometry, url, float, sectsty
+
+script:
+- docker pull strauman/travis-latexbuild:full
+- docker run --mount src=$TRAVIS_BUILD_DIR/,target=/repo,type=bind strauman/travis-latexbuild:full
