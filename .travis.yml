@@ -3,12 +3,13 @@ language:   generic
 services:   docker
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: yaroslav_shumlianskyi_cv.pdf
+  skip_cleanup: true
   keep-history: true
   on:
-    branch: develop
+    tags: true
 
 tex-config:
 - tex-scheme=small
