@@ -1,10 +1,10 @@
-sudo:       required
-language:   generic
-services:   docker
-
+sudo: required
+language: generic
+services: docker
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
+  api_key:
+    secure: CNKC9vj/sMvnGX83YmrEyowiZMxMla8SD0VxeoPz7LJt2KxV9Vvnq95HUxHVTLLor3ttGBx9uIm4x6k57VnyVYPm7tispHser1MYEyv+ailk5bG9QLglrhZJECysg8PmpeI25yAFzWByC+jybFMc0aNYkd4ZsIgLT/dp0E3keZwT1FcY63DPxU5wRtQxREBU/V4N29/C8yxEisUXB4TxxjWRFCKIfiI7MehS60/bhV3wmqFTQmISC3kf1AZ67JtIeC8FeFR5ka/kS8Sfc9jc9BDqOnpEfnlPHPwd7lEtVtcB08F5PIBXyq6pc4BRhMYCP4mxTuzILjdJUCmxyQmynwrw3cWtnfJ+3J2V0ZNJfggIXWVmG0hHMGrrURFOY+qHjbEeBANYAYJ8aRTZJYD1wpT91JHx3DwVTM3rVyeGYzVRxquP6k4ROwyaKMCK/Ahmzl6aQJ7DihgnE3y5m399XSbFhFPKvyPzKbuAzsDbbR9S5sKFej9SEeeWUvHDI9BzVFkb7tGrd5BPfp6ElDZIAk9/4vmrEtiy5k4GHCdMcTw7g+b8UazcreDTaKFJYxck+LXZGOrDSs6A51sHMgetox9PxLZ94vxcrGeLwJSfmIq/s3vNis6mxZgdthQwvMIb7T4NHGgrgu6OxzgZfvEhv6IWsa2RBfkzv7X0KJkvDTQ=
   file: yaroslav_shumlianskyi_cv.pdf
   skip_cleanup: true
   keep-history: true
