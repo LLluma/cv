@@ -5,6 +5,7 @@ services:   docker
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
+  pro: true
   file: yaroslav_shumlianskyi_cv.pdf
   skip_cleanup: true
   keep-history: true
